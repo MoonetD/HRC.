@@ -22,43 +22,21 @@
 
             <div class="collapse navbar-collapse" id="navbarsExample07XL">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-              <router-link to="/log-in" class="nav-link regisignRoute text-black"
-                >Log In</router-link
+              <router-link
+                to="/register"
+                class="nav-link regisignRoute text-black"
+                >Sign Up</router-link
               >
             </div>
           </div>
         </nav>
         <hr />
         <div class="regisign">
-          <h1 class="regisignHeader">Welcome to HRC.</h1>
+          <h1 class="regisignHeader">Welcome Back!</h1>
           <p class="regisignP">
-            We Appricieate your consideration of joining HRC. to fight for a
-            cost to save lives!
+            Thank you for being a member of HRC. The Community is growing
+            stronger because of you!
           </p>
-          <div class="form-floating fluid-container regisignInput">
-            <div class="row">
-              <div class="col-lg-6">
-                <label for="invitationCode">Invitation Code</label>
-                <input
-                  type="text"
-                  class="form-control w-100"
-                  id="invitationCode"
-                  placeholder="XXXX-XXXX-XXXX"
-                  v-model="invitation"
-                />
-                
-              </div>
-              <div class="col-lg-6">
-                <button
-                  @click="invitation"
-                  class="w-100 btn btn-lg btn-yellow"
-                  type="submit"
-                >
-                  Apply for Invitation Code
-                </button>
-              </div>
-            </div>
-          </div>
 
           <div class="form-floating regisignInput">
             <input
@@ -71,7 +49,7 @@
             <label for="floatingInput">Email address</label>
           </div>
 
-          <div class="form-floating regisignInput ">
+          <div class="form-floating regisignInput">
             <input
               type="password"
               class="form-control"
@@ -81,34 +59,26 @@
             />
             <label for="floatingPassword">Password</label>
           </div>
-
-          <!-- <p><input type="text" placeholder="Email" /></p>
-          <p>
-            <input type="password" placeholder="Password" />
-          </p> -->
           <p v-if="errMsg">{{ errMsg }}</p>
           <button
             @click="register"
-            class="w-100 btn btn-lg btn-blue regisignInput"
+            class="w-100 btn btn-lg btn-ye regisignInput"
             type="submit"
           >
             Sign Up
           </button>
-          <hr>
+          <hr />
           <button
             @click="signInWithGoogle"
-            class="w-100 btn btn-outline-primary btn-lg regisignInput regisignGoogle"
+            class="w-100 btn btn-outline-primary btn-lg regisignInput regilogGoogle"
             type="submit"
           >
-            Sign Up With Google
+            Sign In With Google
           </button>
-
-
         </div>
       </div>
-      <div class="col-lg-6 blueGround">
-        <img class="logo regisignLogo" src="../assets/healthcare.png" />
-        
+      <div class="col-lg-6 yellowGround">
+        <img class=" regisignLogo" src="../assets/healthcare.png" />
       </div>
     </div>
   </div>
@@ -116,15 +86,10 @@
 
 <script setup>
 import { ref } from "vue";
-import { getAuth, createUserWithEmailAndPassword,GoogleAuthProvider ,signInWithPopup  } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword,GoogleAuthProvider ,signInWithPopup } from "firebase/auth";
 import { useRouter } from "vue-router";
-//console.log("I have come here");
-const email = ref("");
-const errMsg = ref(); //ERROR MESSAGE
-const password = ref("");
-const router = useRouter(); // get a reference to our vue routerconst provider = new GoogleAuthProvider();
-const auth = getAuth();
 const provider = new GoogleAuthProvider();
+const auth = getAuth();
 const signInWithGoogle = ()=> signInWithPopup(auth, provider)
   .then((result) => {
     // This gives you a Google Access Token. You can use it to access the Google API.
@@ -145,11 +110,17 @@ const signInWithGoogle = ()=> signInWithPopup(auth, provider)
     // ...
   });
 
+const email = ref("");
+const password = ref("");
+const errMsg = ref(); //ERROR MESSAGE
+const router = useRouter(); // get a reference to our vue router
+//console.log("I have and come here");
+
 const register = () => {
   console.log("Registering");
-  createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+  signInWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) => {
-      console.log("Succesfully registered!");
+      console.log("Succesfully Signin!");
       router.push("/feed");
     })
     .catch((error) => {
@@ -158,11 +129,11 @@ const register = () => {
         case "auth/invalid-email":
           errMsg.value = "Invalid email";
           break;
-        case "auth/email-already-in-use":
-          errMsg.value = "This Email Is Already Registered";
+        case "auth/user-not-found":
+          errMsg.value = "No account with that email was found";
           break;
-        case "auth/weak-password":
-          errMsg.value = "Your Password Is Too Weak";
+        case "auth/wrong-password":
+          errMsg.value = "Incorrect password";
           break;
         default:
           errMsg.value = "Email or password was incorrect";

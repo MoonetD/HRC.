@@ -17,8 +17,12 @@ const router = createRouter({
       component: () => import("../views/Register.vue")
     },
     {
-      path: "/sign-in",
-      component: () => import("../views/SignIn.vue")
+      path: "/log-in",
+      component: () => import("../views/Log-in.vue")
+    },
+    {
+      path: "/findHRC",
+      component: () => import("../views/findHRC.vue")
     },
     {
       path: "/feed",
@@ -31,7 +35,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  console.log("lol?");
+
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     console.log("checking?");
     if (getAuth().currentUser) {

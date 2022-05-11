@@ -7,6 +7,9 @@ import router from "./router"
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from "firebase/database";
+import { getFirestore, doc, collection, getDocs,getDoc } from 'firebase/firestore/lite';
+import { addDoc, setDoc } from "firebase/firestore"; 
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -16,6 +19,7 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyAiDKevHPkyVn9Q7BzmKowbAr4rHL_Qz8Y",
   authDomain: "test-authendication-project.firebaseapp.com",
+  databaseURL: "https://test-authendication-project-default-rtdb.firebaseio.com",
   projectId: "test-authendication-project",
   storageBucket: "test-authendication-project.appspot.com",
   messagingSenderId: "508647974331",
@@ -24,8 +28,18 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
- initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
 
+const HRCspecial = doc(db,"SearchDetails","r12jlgf2iXZZP54QevJ3");
+const docSnap = await getDoc(HRCspecial)
+
+if (docSnap.exists()) {
+  console.log("Document data:", docSnap.data());
+} else {
+  // doc.data() will be undefined in this case
+  console.log("No such document!");
+}
 const app = createApp(App)
 
 app.use(router)

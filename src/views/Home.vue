@@ -1,6 +1,71 @@
+
+
 <template>
   <!-- Navbar -->
-  <div class="navBar"></div>
+  
+    <header class="p-3 navbar navbar-expand-lg navbar-light bg-navbar text-black">
+    <div class="container-fluid title-up">
+      <a href="/" class="navbar-brand offset-lg-2 font-exo fw-bold brand">HRC.</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse  " id="navbarTogglerDemo03">
+        <div class="ti col-lg-8 container">
+          <div
+            class="d-flex flex-wrap "
+          >
+            <ul
+              class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+            >
+              <li>
+                <router-link to="/" class="nav-link px-2 text-secondary"
+                  >Home</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/findHRC" class="nav-link px-2 text-black"
+                  >Find HRC</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/resource" class="nav-link px-2 text-black"
+                  >Resources</router-link>
+              </li>
+              <li>
+                <router-link to="/about" class="nav-link px-2 text-black"
+                  >About</router-link
+                >
+              </li>
+              <li>
+                <button v-if="isLoggedIn" @click="handleSignOut">
+                  Sign out
+                </button>
+              </li>
+            </ul>
+
+            <div class="text-end">
+              <router-link
+                to="/register"
+                type="button"
+                class="btn btn-outline-primary left"
+                >Join as a HRC Service Provider</router-link
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </header>
 
   <!-- Title -->
 
@@ -15,7 +80,7 @@
           is no one to help you prevent or reverse Overdose. Try out a Harm
           Reduction Center to help you prevent Overdose!
         </p>
-        <router-link to="/register" type="button" class="btn search-btn"
+        <router-link to="/findHRC" type="button" class="btn search-btn"
           >Search for a safe space
           <img src="../assets/search_icon.png" class="search-icons" alt=""
         /></router-link>
@@ -47,7 +112,7 @@
         <div class="col-lg-4">
           <img
             class="feature-icons"
-            src="../assets/different units.png"
+            src="../assets/different_Units.png"
             alt="verified_logo"
           />
           <h3 class="feature-text">Diverse Service Providers</h3>
@@ -153,7 +218,7 @@
         </div>
         <div class="col-lg-6 cta-btn">
           <router-link
-            to="/register"
+            to="/findHRC"
             type="button"
             class="btn search-cta my-auto"
             >Start Searching!
