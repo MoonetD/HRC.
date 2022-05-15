@@ -117,7 +117,6 @@ const router = useRouter(); // get a reference to our vue router
 //console.log("I have and come here");
 
 const register = () => {
-  console.log("Registering");
   signInWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) => {
       console.log("Succesfully Signin!");

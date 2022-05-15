@@ -21,7 +21,7 @@ const router = createRouter({
       component: () => import("../views/Log-in.vue")
     },
     {
-      path: "/findHRC",
+      path: "/findHRC/:name",
       component: () => import("../views/findHRC.vue")
     },
     {

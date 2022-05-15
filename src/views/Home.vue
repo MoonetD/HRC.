@@ -27,12 +27,7 @@
               class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
             >
               <li>
-                <router-link to="/" class="nav-link px-2 text-secondary"
-                  >Home</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/findHRC" class="nav-link px-2 text-black"
+                <router-link to="/findHRC/providence" class="nav-link px-2 text-black"
                   >Find HRC</router-link
                 >
               </li>

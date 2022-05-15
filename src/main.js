@@ -31,15 +31,7 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
 
-const HRCspecial = doc(db,"SearchDetails","r12jlgf2iXZZP54QevJ3");
-const docSnap = await getDoc(HRCspecial)
 
-if (docSnap.exists()) {
-  console.log("Document data:", docSnap.data());
-} else {
-  // doc.data() will be undefined in this case
-  console.log("No such document!");
-}
 const app = createApp(App)
 
 app.use(router)

@@ -44,7 +44,7 @@ h2 {
 }
 .central,
 #testimony {
-  padding: 0 15.5%;
+  padding: 0 15%;
   background-color: #33a9bc;
   color: white;
   width: auto;
@@ -163,16 +163,16 @@ Credits */
   margin-bottom: 80%;
 }
 .carousel-inner{
-  width: 75%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 .carousel-control-prev{
-  margin-left: 9%;
+  margin-left: 2%;
 }
 
 .carousel-control-next{
-  margin-right: 9%;
+  margin-right: 2%;
 }
 
 /* 
@@ -215,9 +215,14 @@ Credits */
   }
 /* 
   footer */
-  body {
+body{
+    margin :0px;
+}
+and
+.container {
     height: 100vh;
-    margin: 0;
+    border: 3px;
+    box-sizing: border-box;
 }
 #rights {
   background-color: #33a9bc;
@@ -477,9 +482,9 @@ Credits */
     font-weight: 600;
     font-size: 2rem;
     line-height: 1.5;
-    padding: 0rem 0 3rem 0;
+    padding: 0rem 0 0rem 0;
     margin: 0 0%;
-    margin-top: 20%;
+    /* margin-top: 20%; */
   }
   .cta-btn,.search-cta{
     width: 100%;
