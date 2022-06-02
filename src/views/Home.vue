@@ -107,7 +107,7 @@
         <div class="col-lg-4">
           <img
             class="feature-icons"
-            src="../../public/src/different_Units.png"
+            src="../../public/src/different_units.png"
             alt="verified_logo"
           />
           <h3 class="feature-text">Diverse Service Providers</h3>
