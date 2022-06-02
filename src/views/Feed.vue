@@ -2,7 +2,6 @@
 
 
 
-<h1>Feed</h1>
-
+<h1 class="text-black"> UNDER CONSTRUCTION =)</h1>
 
 </template>

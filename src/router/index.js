@@ -21,15 +21,32 @@ const router = createRouter({
       component: () => import("../views/Log-in.vue")
     },
     {
+      path: "/HRCProvider/SearchHistory/",
+      component: () => import("../views/SearchHistory.vue")
+    },
+    {
+      path: "/HRCProvider/GISFinder",
+      component: () => import("../views/GISSearch.vue")
+    },
+    {
+      path: "/HRCProvider",
+      component: () => import("../views/ProviderHub.vue")
+    },
+    {
       path: "/findHRC/:name",
       component: () => import("../views/findHRC.vue")
     },
     {
-      path: "/feed",
+      path: "/HRCDetails/:name",
+      component: () => import("../views/HRCDetails.vue")
+    },
+    {
+      path: "/HRCProvider/HRCForm",
+      component: () => import("../views/HRCForm.vue")
+    },
+    {
+      path: "/underconstruction",
       component: () => import("../views/Feed.vue"),
-      meta: {
-        requiresAuth: true,
-      },
     },
   ],
 });

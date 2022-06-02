@@ -65,7 +65,7 @@
             class="w-100 btn btn-lg btn-ye regisignInput"
             type="submit"
           >
-            Sign Up
+            Sign In
           </button>
           <hr />
           <button
@@ -97,7 +97,7 @@ const signInWithGoogle = ()=> signInWithPopup(auth, provider)
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    router.push("/feed");
+    router.push("/HRCProvider");
     // ...
   }).catch((error) => {
     // Handle Errors here.
@@ -113,14 +113,14 @@ const signInWithGoogle = ()=> signInWithPopup(auth, provider)
 const email = ref("");
 const password = ref("");
 const errMsg = ref(); //ERROR MESSAGE
-const router = useRouter(); // get a reference to our vue router
+const router = useRouter(); // get a reF#ference to our vue router
 //console.log("I have and come here");
 
 const register = () => {
   signInWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) => {
       console.log("Succesfully Signin!");
-      router.push("/feed");
+      router.push("/HRCProvider");
     })
     .catch((error) => {
       console.log(error.code);

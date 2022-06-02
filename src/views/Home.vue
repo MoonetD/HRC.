@@ -75,7 +75,7 @@
           is no one to help you prevent or reverse Overdose. Try out a Harm
           Reduction Center to help you prevent Overdose!
         </p>
-        <router-link to="/findHRC" type="button" class="btn search-btn"
+        <router-link to="/findHRC/providence" type="button" class="btn brn-primary search-btn"
           >Search for a safe space
           <img src="../assets/search_icon.png" class="search-icons" alt=""
         /></router-link>
@@ -213,7 +213,7 @@
         </div>
         <div class="col-lg-6 cta-btn">
           <router-link
-            to="/findHRC"
+            to="/findHRC/providence"
             type="button"
             class="btn search-cta my-auto"
             >Start Searching!

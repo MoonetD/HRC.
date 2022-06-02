@@ -40,7 +40,7 @@
               <div class="col-lg-6">
                 <label for="invitationCode">Invitation Code</label>
                 <input
-                  type="text"
+                  type="search"
                   class="form-control w-100"
                   id="invitationCode"
                   placeholder="XXXX-XXXX-XXXX"
@@ -132,7 +132,7 @@ const signInWithGoogle = ()=> signInWithPopup(auth, provider)
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    router.push("/feed");
+    router.push("/HRCProvider");
     // ...
   }).catch((error) => {
     // Handle Errors here.
@@ -150,7 +150,7 @@ const register = () => {
   createUserWithEmailAndPassword(getAuth(), email.value, password.value)
     .then((data) => {
       console.log("Succesfully registered!");
-      router.push("/feed");
+      router.push("/HRCProvider");
     })
     .catch((error) => {
       console.log(error.code);
