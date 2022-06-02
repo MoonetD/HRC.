@@ -119,9 +119,9 @@ import { onMounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import permanentIcon from "../assets/permanent icon.png";
-import searchLocation from "../assets/search-grey.png";
-import temporaryIcon from "../assets/temporaryIcon.png";
+import permanentIcon from "../../public/src/permanent icon.png";
+import searchLocation from "../../public/src/search-grey.png";
+import temporaryIcon from "../../public/src/temporaryIcon.png";
 import { initializeApp } from "firebase/app";
 import { doc, setDoc } from "firebase/firestore";
 import { getDoc, collection, getDocs } from "firebase/firestore";
@@ -682,7 +682,7 @@ onMounted(() => {
                 <div class="col-4 col-lg-3 hrcType">
                   <img
                     class="typeIcon"
-                    :src="'../typeIcons/' + item.HRCDetails.HRCTYPE + '.png'"
+                    :src="'src/typeIcons/' + item.HRCDetails.HRCTYPE + '.png'"
                     alt=""
                   />
                   {{ item.HRCDetails.HRCTYPE }}
@@ -698,7 +698,7 @@ onMounted(() => {
                   <img
                     class="profilePhoto"
                     :src="
-                      '../profile/' +
+                      '../../public/src/profile/' +
                       item.HRCDetails.HRCTYPE +
                       item.HRCDetails.NAME +
                       '.png'

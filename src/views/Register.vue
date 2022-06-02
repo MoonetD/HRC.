@@ -107,7 +107,7 @@
         </div>
       </div>
       <div class="col-lg-6 blueGround">
-        <img class="logo regisignLogo" src="../assets/healthcare.png" />
+        <img class="logo regisignLogo" src="src/healthcare.png" />
         
       </div>
     </div>
