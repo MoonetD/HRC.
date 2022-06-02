@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="col-lg-6 yellowGround">
-        <img class=" regisignLogo" src="src/healthcare.png" />
+        <img class=" regisignLogo" src="../../public/src/healthcare.png" />
       </div>
     </div>
   </div>

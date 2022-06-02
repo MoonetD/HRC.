@@ -71,7 +71,7 @@
         <router-link to="/HRCProvider/searchHistory">
               <img
                 class="icon"
-                src="../../public/userIcon/Project Weber Renew.png"
+                src="../../public/userIcon/ProjectWeberRenew.png"
                 alt=""
               /></router-link>
       </div>

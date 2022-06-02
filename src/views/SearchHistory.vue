@@ -29,7 +29,7 @@
               <button class="btn btn-light dash">Dashboard</button></router-link>
               <img
                 class="icon"
-                src="../../public/userIcon/Project Weber Renew.png"
+                src="../../public/userIcon/ProjectWeberRenew.png"
                 alt=""
               />
               <router-link

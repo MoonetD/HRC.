@@ -77,12 +77,12 @@
         </p>
         <router-link to="/findHRC/providence" type="button" class="btn brn-primary search-btn"
           >Search for a safe space
-          <img src="src/search_icon.png" class="search-icons" alt=""
+          <img src="../../public/src/search_icon.png" class="search-icons" alt=""
         /></router-link>
       </div>
       <div class="z-1 mx-auto col-lg-6 title-split">
         <div class="">
-          <img class="logo rotate" src="src/healthcare.png" alt="" />
+          <img class="logo rotate" src="../../public/src/healthcare.png" alt="" />
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
         <div class="col-lg-4">
           <img
             class="feature-icons"
-            src="src/verified_icon.png"
+            src="../../public/src/verified_icon.png"
             alt="verified_logo"
           />
           <h3 class="feature-text">Verified Harm Reduction Center</h3>
@@ -107,7 +107,7 @@
         <div class="col-lg-4">
           <img
             class="feature-icons"
-            src="src/different_Units.png"
+            src="../../public/src/different_Units.png"
             alt="verified_logo"
           />
           <h3 class="feature-text">Diverse Service Providers</h3>
@@ -120,7 +120,7 @@
         <div class="col-lg-4">
           <img
             class="feature-icons"
-            src="src/location_icon.png"
+            src="../../public/src/location_icon.png"
             alt="verified_logo"
           />
           <h3 class="feature-text">Find Potential HRC Sites</h3>
@@ -186,17 +186,17 @@
     <div class="credits-icons">
       <img
         class="credits align-left"
-        src="src/cfclogo.png"
+        src="../../public/src/cfclogo.png"
         alt="tc-logo"
       />
       <img
         class="credits align-left"
-        src="src/RISD_logo.png"
+        src="../../public/src/RISD_logo.png"
         alt="tnw-logo"
       />
       <img
         class="credits align-left"
-        src="src//brown_icon.png"
+        src="../../public/src//brown_icon.png"
         alt="biz-insider-logo"
       />
     </div>
@@ -217,7 +217,7 @@
             type="button"
             class="btn search-cta my-auto"
             >Start Searching!
-            <img src="src/white-search-icon.png" class="search-icons-cta" alt=""
+            <img src="../../public/src/white-search-icon.png" class="search-icons-cta" alt=""
           /></router-link>
         </div>
       </div>
