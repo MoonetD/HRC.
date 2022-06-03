@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 5050",
-    "serve": "vue-cli-service serve"
+    "serve": "vue-cli-service serve",
+    "start": "node index.js"
   },
   "dependencies": {
     "@arcgis/core": "^4.23.7",
